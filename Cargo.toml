@@ -1,0 +1,26 @@
+[package]
+name = "llmcraft"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85.0"
+authors = ["Kreive Tech <contact@kreive.com.br>"]
+license = "MIT"
+description = "Lightweight, universal multi-provider LLM client and token telemetry for Rust (OpenAI, Anthropic, Gemini, Ollama, DeepSeek, Groq, Mistral)."
+repository = "https://github.com/kreivetech/llmcraft"
+homepage = "https://kreive.com.br"
+readme = "README.md"
+keywords = ["llm", "ai", "openai", "anthropic", "gemini"]
+categories = ["api-bindings", "asynchronous"]
+
+[dependencies]
+tokio = { version = "1.40", features = ["sync", "time", "macros"] }
+reqwest = { version = "0.13", features = ["json", "stream"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+futures = "0.3"
+futures-util = "0.3"
+thiserror = "2.0"
+chrono = { version = "0.4", features = ["serde"] }
+
+[dev-dependencies]
+tokio = { version = "1.40", features = ["full"] }
